@@ -7,6 +7,8 @@ namespace UserRegistrationAndLogin
 {
     public partial class Form1 : Form
     {
+        public string UserName;
+        public string Email;
         string _connectionString;
         public Form1()
         {
@@ -60,6 +62,12 @@ namespace UserRegistrationAndLogin
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
+            UserName = txtUserName.Text;
+            Email = txtEmailAddress.Text;
+            UserInfo userInfo = new UserInfo(UserName,Email);
+            userInfo.Show();
+            this.Hide();
 
         }
     }
