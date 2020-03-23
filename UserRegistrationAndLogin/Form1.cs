@@ -57,5 +57,10 @@ namespace UserRegistrationAndLogin
             dataGridView1.DataSource = dt;
             sqlCmd.Connection.Close();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
