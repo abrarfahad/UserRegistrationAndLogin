@@ -34,7 +34,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmailAddress = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -87,15 +87,15 @@
             this.txtEmailAddress.Size = new System.Drawing.Size(338, 20);
             this.txtEmailAddress.TabIndex = 4;
             // 
-            // btnSave
+            // btn3
             // 
-            this.btnSave.Location = new System.Drawing.Point(653, 394);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save Button";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.button1_Click);
+            this.btn3.Location = new System.Drawing.Point(653, 394);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(75, 23);
+            this.btn3.TabIndex = 6;
+            this.btn3.Text = "Save Button";
+            this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -114,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btn3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.label2);
@@ -138,7 +138,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmailAddress;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
