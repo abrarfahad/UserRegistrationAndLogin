@@ -13,15 +13,15 @@ namespace UserRegistrationAndLogin
         public Form1()
         {
             InitializeComponent();
-            _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mou\Desktop\OOP2\TestDb3.mdf;Integrated Security=True;Connect Timeout=30";
+            _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mou\Desktop\OOP2\TestDb4.mdf;Integrated Security=True;Connect Timeout=30";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string sql = string.Format("insert into Users " +
-          "(UserName,Password,EmailAddress,UpdatedDate) " +
-          "Values ('{0}','{1}','{2}','{3}')",
-          txtUserName.Text, txtPassword.Text, txtEmailAddress.Text, System.DateTime.Now.ToString());
+          "(UserName,Password,EmailAddress,DOB,UpdatedDate) " +
+          "Values ('{0}','{1}','{2}','{3}','{4}')",
+          txtUserName.Text, txtPassword.Text, txtEmailAddress.Text, System.DateTime.Now.ToString(), System.DateTime.Now.ToString());
             SqlConnection conn = new SqlConnection(_connectionString);
             SqlCommand sqlCmd = new SqlCommand(sql, conn);
             sqlCmd.Connection.Open();
@@ -65,7 +65,7 @@ namespace UserRegistrationAndLogin
             
             UserName = txtUserName.Text;
             Email = txtEmailAddress.Text;
-            UserInfo userInfo = new UserInfo(UserName,Email);
+            UserInfo userInfo = new UserInfo(this,UserName,Email,DateTime.Now);
             userInfo.Show();
             this.Hide();
 

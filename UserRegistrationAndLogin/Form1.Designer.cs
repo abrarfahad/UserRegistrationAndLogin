@@ -87,7 +87,7 @@
             this.txtEmailAddress.Size = new System.Drawing.Size(338, 20);
             this.txtEmailAddress.TabIndex = 4;
             // 
-            // btn3
+            // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(653, 394);
             this.btnSave.Name = "btnSave";
@@ -95,7 +95,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save1";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dataGridView1
             // 

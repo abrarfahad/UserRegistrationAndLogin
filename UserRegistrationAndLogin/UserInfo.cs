@@ -14,30 +14,39 @@ namespace UserRegistrationAndLogin
     {
         string email;
         string userName;
-        public UserInfo(string username,string email )
+        DateTime dateOfBirth;
+        Form previousForm;
+        public UserInfo(Form _previousForm,string username,string email,DateTime dob )
         {
-                userName = username;
-                this.email = email;
-
             InitializeComponent();
-            
-
+            userName = username;
+            this.email = email;
+            dateOfBirth = dob;
+            previousForm = _previousForm;
         }
 
         private void UserInfo_Load(object sender, EventArgs e)
         {
-            lblUserInfo.Text = userName + " and ";
+            lblUserInfo.Text = userName + ", ";
             lblUserInfo.Text += email;
+            lblUserInfo.Text += " and " + dateOfBirth.ToShortDateString();
         }
 
-        private void UserInfo_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Clicked on form");
-        }
+            LoginForm loginForm;
+            if (previousForm is LoginForm && previousForm!=null)
+            {
+                loginForm = (LoginForm)previousForm ;
+            }
+            else
+            {
+                loginForm = new LoginForm();
+            }
+            loginForm.Show();
+            this.Close();
+            this.Dispose();
 
-        private void UserInfo_ClientSizeChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show("Client Size Changed");
         }
     }
 }

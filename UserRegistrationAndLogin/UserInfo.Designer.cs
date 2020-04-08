@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblUserInfo = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUserInfo
@@ -41,17 +42,26 @@
             this.lblUserInfo.TabIndex = 0;
             this.lblUserInfo.Text = "label1";
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(713, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // UserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblUserInfo);
             this.Name = "UserInfo";
             this.Text = "UserInfo";
             this.Load += new System.EventHandler(this.UserInfo_Load);
-            this.ClientSizeChanged += new System.EventHandler(this.UserInfo_ClientSizeChanged);
-            this.Click += new System.EventHandler(this.UserInfo_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -60,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblUserInfo;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
